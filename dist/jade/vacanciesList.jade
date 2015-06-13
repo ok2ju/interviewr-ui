@@ -1,0 +1,149 @@
+extends ./components/layout/main-layout.jade
+
+block title
+  title Vacancies
+
+block header
+  include ./components/header/header.jade
+
+block content
+  main(role='main').content
+    section.container
+      section.row
+        section.filter-wrap
+          div.cl-filter
+            label.c-form-label Location:
+            select.input-filter
+              option Choose
+              option Belarus
+              option Russia
+              option United States
+              option Canada
+          div.cl-filter
+            label.c-form-label Vacancy:
+            select.input-filter
+              option Choose
+              option Front-End
+              option Back-End
+              option Designer
+              option UI/UX
+          ul.filter-list
+            li.filter-list__item
+              span.filter-list-label Level
+            li.filter-list__item
+              a(href='#').filter-list-link Senior
+            li.filter-list__item
+              a(href='#').filter-list-link Mid
+            li.filter-list__item
+              a(href='#').filter-list-link Junior
+          ul.filter-list
+            li.filter-list__item
+              span.filter-list-label Type
+            li.filter-list__item
+              a(href='#').filter-list-link Programmer
+            li.filter-list__item
+              a(href='#').filter-list-link Tester
+            li.filter-list__item
+              a(href='#').filter-list-link Manager
+            li.filter-list__item
+              a(href='#').filter-list-link Business Analyst
+        section.companylist-wrapper
+          ul.company-list
+            li.company-list__item
+              div.company-logo.company-col
+                img(src='../app/public/images/GitHub-Logo.png').company-logo__img
+              div.company-info.company-col
+                div.company-head
+                  h1.company-head__name Software Engineer
+                div.company-body
+                  span.company-location
+                    i.fa.fa-map-marker.ico-company-locate
+                    | San Francisco
+                  a(href='#').company-site github.com
+                  span.company-body__vac-type programmer
+                  p.company-body__about.
+                    Powerful collaboration, code review, and code management
+                    for open source and private projects.
+                div.company-labels
+                  ul.vacancies
+                    li.vacancies__item.vacancies-tag Skills:
+                    li.vacancies__item
+                      span.vacancies-label.label-success Java Core
+                    li.vacancies__item
+                      span.vacancies-label.label-success JVM
+                    li.vacancies__item
+                      span.vacancies-label.label-success Git
+                    li.vacancies__item
+                      span.vacancies-label.label-success UNIX
+              div.company-more.company-col
+                div.company-more__inf
+                  h1.company-more__num-emp 100
+                  small.company-more__label Applicants
+                a(href='#').company-head__btn More
+            li.company-list__item
+              div.company-logo.company-col
+                img(src='../app/public/images/flickr-l.png').company-logo__img
+              div.company-info.company-col
+                div.company-head
+                  h1.company-head__name JavaScript Developer
+                div.company-body
+                  span.company-location
+                    i.fa.fa-map-marker.ico-company-locate
+                    | San Francisco
+                  a(href='#').company-site flickr.com
+                  span.company-body__vac-type programmer
+                  p.company-body__about.
+                    Become obsessed with our social feed of daily
+                    inspiration from the photographers you follow.
+                    Explore Flickr to easily find everything you're
+                    interested in. Join the world's largest photography
+                    community, discover billions of beautiful photos and share your own.
+                div.company-labels
+                  ul.vacancies
+                    li.vacancies__item.vacancies-tag Skills:
+                    li.vacancies__item
+                      span.vacancies-label.label-success EcmaScript 6
+                    li.vacancies__item
+                      span.vacancies-label.label-success ReactJS
+                    li.vacancies__item
+                      span.vacancies-label.label-success Git
+                    li.vacancies__item
+                      span.vacancies-label.label-success BackboneJS
+              div.company-more.company-col
+                div.company-more__inf
+                  h1.company-more__num-emp 55
+                  small.company-more__label Applicants
+                a(href='#').company-head__btn More
+            li.company-list__item
+              div.company-logo.company-col
+                img(src='../app/public/images/google-logo.jpg').company-logo__img
+              div.company-info.company-col
+                div.company-head
+                  h1.company-head__name Business Analyst
+                div.company-body
+                  span.company-location
+                    i.fa.fa-map-marker.ico-company-locate
+                    | San Francisco
+                  a(href='#').company-site google.com
+                  span.company-body__vac-type business analyst
+                  p.company-body__about.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it
+                div.company-labels
+                  ul.vacancies
+                    li.vacancies__item.vacancies-tag Skills:
+                    li.vacancies__item
+                      span.vacancies-label.label-success Business Analys
+                    li.vacancies__item
+                      span.vacancies-label.label-success QA Engineer
+              div.company-more.company-col
+                div.company-more__inf
+                  h1.company-more__num-emp 1100
+                  small.company-more__label Applicants
+                a(href='#').company-head__btn More
+  script(type='text/javascript').
+    document.querySelector( ".acc-photo-link" ).
+        addEventListener( "click", function() {
+          document.querySelector( ".header-nav" ).classList.toggle( "active" );
+        });

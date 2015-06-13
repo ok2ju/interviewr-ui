@@ -1,0 +1,234 @@
+extends ./components/layout/main-layout.jade
+
+block title
+  title User page
+
+block header
+  include ./components/header/header.jade
+
+block content
+  main(role='main').content
+    section.container
+      section.row
+        div.u-avatar-wrapper
+          img(src='../app/public/images/12.png').u-avatar
+          div.u-avatar__btns-wrap
+            a(href='#').user-button Video Call
+            a(href='#').user-button Job Offer
+            a(href='#').user-button.set-interview-date Set Interview Date
+          div.u-avatar__btns-wrap
+            table.profile-status
+              tbody
+                tr.profile-status__row
+                  td.profile-status__col Status
+                  td.profile-status__col
+                    span.vacancies-label.label-success Active
+                tr.profile-status__row
+                  td.profile-status__col Member Since
+                  td.profile-status__col Jan 07, 2014
+        div.u-info
+          header.u-name
+            h1.u-name__name Sally Flores
+          section.u-info-section
+            div
+              span.dob.short-info
+                i.fa.ico-company-locate.fa-calendar
+                | Jan 22, 1984
+              br
+              span.place.short-info
+                i.fa.ico-company-locate.fa-map-marker
+                | United States, Los Angeles
+              span.p-email.short-info sally@interviewman.com
+              p.p-about.
+                Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries,
+            div.vacancies-container
+              ul.vacancies
+                li.vacancies__item.vacancies-tag Skills:
+                li.vacancies__item
+                  span.vacancies-label.label-default WEB-Designer
+                li.vacancies__item
+                  span.vacancies-label.label-primary Android Engineer
+                li.vacancies__item
+                  span.vacancies-label.label-success HR Manager
+                li.vacancies__item
+                  span.vacancies-label.label-info iOS Developer
+                li.vacancies__item
+                  span.vacancies-label.label-warning Front-End Engineer
+                li.vacancies__item
+                  span.vacancies-label.label-danger QA Engineer
+            div.row-exp-skill
+              div.experience
+                p.separator
+                  span Experience
+                ul.exp-list
+                  li.exp-list__item
+                    hgroup
+                      h5.exp-list__company-logo
+                        a(href='#')
+                          img(src='../app/public/images/epam-logo.png')
+                      h4.position
+                        a(href='#').position-link Software Engineer
+                      h5.exp-company
+                        span
+                          strong
+                            a(href='#').exp-company-link EPAM Systems
+                    span.exp-timeline
+                      time январь 2014
+                      – настоящее время (1 год 4 месяца)
+                      span  | Гродно
+                    dl.projects
+                      dt.projects-head
+                        span.drop-projects.closed
+                        | 3 Projects
+                      dd.projects-content.closed
+                        ul.project-list
+                          li.project-list__item
+                            h6
+                              span.project-list__project-name SAP One Digital Experience
+                            p.project-list__project-about.
+                              Lorem Ipsum just simple text about nothing
+                          li.project-list__item
+                            h6
+                              span.project-list__project-name SAP One Digital Experience
+                            p.project-list__project-about.
+                              Lorem Ipsum just simple text about nothing
+                          li.project-list__item
+                            h6
+                              span.project-list__project-name SAP One Digital Experience
+                            p.project-list__project-about.
+                              Lorem Ipsum just simple text about nothing
+                          li.project-list__item
+                            h6
+                              span.project-list__project-name SAP One Digital Experience
+                            p.project-list__project-about.
+                              Lorem Ipsum just simple text about nothing
+                  li.exp-list__item
+                    hgroup
+                      h5.exp-list__company-logo
+                        a(href='#')
+                          img(src='../app/public/images/epam-logo.png')
+                      h4.position
+                        a(href='#').position-link Junior Software Engineer
+                      h5.exp-company
+                        span
+                          strong
+                            a(href='#').exp-company-link EPAM Systems
+                    span.exp-timeline
+                      time январь 2014
+                      – настоящее время (1 год 4 месяца)
+                      span  | Гродно
+                  li.exp-list__item
+                    hgroup
+                      h5.exp-list__company-logo
+                        a(href='#')
+                          img(src='../app/public/images/epam-logo.png')
+                      h4.position
+                        a(href='#').position-link Intern
+                      h5.exp-company
+                        span
+                          strong
+                            a(href='#').exp-company-link EPAM Systems
+                    span.exp-timeline
+                      time январь 2014
+                      – настоящее время (1 год 4 месяца)
+                      span  | Гродно
+                  li.exp-list__item
+                    hgroup
+                      h5.exp-list__company-logo
+                        a(href='#')
+                          img(src='../app/public/images/epam-logo.png')
+                      h4.position
+                        a(href='#').position-link Student
+                      h5.exp-company
+                        span
+                          strong
+                            a(href='#').exp-company-link EPAM Systems
+                    span.exp-timeline
+                      time январь 2014
+                      – настоящее время (1 год 4 месяца)
+                      span  | Гродно
+              div.experience
+                p.separator
+                  span Education
+                ul.exp-list
+                  li.exp-list__item
+                    hgroup
+                      h5.exp-list__company-logo
+                        a(href='#')
+                          img(src='../app/public/images/grsu-logo.png', width='60', height='60').edu-logo
+                      h4.position
+                        a(href='#').position-link Student
+                      h5.exp-company
+                        span
+                          strong
+                            a(href='#').exp-company-link Grondo State University
+                    span.exp-timeline
+                      time 2011 - 2016
+                      span  | Гродно
+                  li.exp-list__item
+                    hgroup
+                      h5.exp-list__company-logo
+                        a(href='#')
+                          img(src='../app/public/images/grsu-logo.png', width='60', height='60').edu-logo
+                      h4.position
+                        a(href='#').position-link Student
+                      h5.exp-company
+                        span
+                          strong
+                            a(href='#').exp-company-link Gymnasium #7
+                    span.exp-timeline
+                      time 2000 - 2011
+                      span  | Гродно
+
+  div.modal
+    div.modal-container
+      h1.modal-header Set Interview Date
+      a(href='#').modal-close-btn
+      form.set-date-form
+        div.icon
+          label.c-form-label Interview Date:
+          input(type='date', name='calendar').c-input
+        div.icon
+          label.c-form-label Interview Time:
+          input(type='text', name='time').c-input
+        div.submit-wrapper
+          input(type='submit', value='Send').c-btn-submit
+  script(type='text/javascript').
+    document.querySelector( ".acc-photo-link" ).
+        addEventListener( "click", function() {
+          document.querySelector( ".header-nav" ).classList.toggle( "active" );
+          var svgElements = document.getElementsByTagName('svg');
+          var testElements = document.querySelectorAll('.navbar-ico');
+
+          for(var i = 0; i < svgElements.length; i++) {
+            svgElements[i].classList.toggle('hide-svg');
+            testElements[i].classList.toggle('show-text');
+          }
+        });
+
+    document.querySelector('.set-interview-date').
+      addEventListener('click', function() {
+        document.querySelector('.modal').classList.toggle('is-visible');
+      });
+
+    document.querySelector('.modal-close-btn').
+      addEventListener('click', function() {
+        document.querySelector('.modal').classList.remove('is-visible');
+      });
+
+    document.querySelector('.modal-close-btn').
+      addEventListener('keyup', function(event) {
+        if(event.keyCode === 27) {
+          document.querySelector('.modal').classList.remove('is-visible');
+        }
+      });
+
+    document.querySelector('.projects-head').
+      addEventListener('click', function() {
+        document.querySelector('.drop-projects').classList.toggle('closed');
+        document.querySelector('.projects-content').classList.toggle('closed');
+      });

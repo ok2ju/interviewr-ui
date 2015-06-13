@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Conference</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome.css">
+  </head>
+  <body>
+    <header class="c-header-wrapper">
+      <div class="container header-inner"><a class="aside-toggle-wrapper"><span class="btn-aside-toggle"></span></a>
+        <div class="navbar-header"><a href="#" class="c-header__name">INTERVIEWR</a></div>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__list-item"><a href="#" class="header-nav__link">CANDIDATES</a></li>
+            <li class="header-nav__list-item"><a href="#" class="header-nav__link">MESSAGES</a></li>
+            <li class="header-nav__list-item"><a href="#" class="header-nav__link">VACANCY</a></li>
+            <li class="header-nav__list-item"><a href="#" class="header-nav__link">SEARCH</a></li>
+          </ul>
+          <ul class="navbar-btns">
+            <li class="navbar-btns__item"><a href="#" aria-label="Search" class="navbar-ico img-replace tooltip-v">SEARCH<i class="fa ico-controll fa-search"></i></a></li>
+            <li class="navbar-btns__item"><a href="#" aria-label="Messages" class="navbar-ico img-replace tooltip-v">MESSAGES<i class="fa ico-controll fa-comments-o"></i></a></li>
+            <li class="navbar-btns__item"><a href="#" aria-label="Actions" class="navbar-ico img-replace tooltip-v">ACTIONS<i class="fa ico-controll fa-bell-o"></i></a></li>
+            <li class="navbar-btns__item"><a href="#" aria-label="Settings" class="navbar-ico img-replace tooltip-v">SETTINGS<i class="fa ico-controll fa-cog"></i></a></li>
+          </ul>
+        </nav>
+        <div class="acc-photo"><a href="#" class="acc-photo-link"><img src="images/1.png" class="acc-photo__img"></a></div>
+      </div>
+    </header>
+    <main role="main" class="content-block test-vid">
+      <section class="c-content">
+        <dl class="accordion">
+          <dt class="accordion__title">Video & Chat
+            <dd class="accordion__content">
+              <div class="video-block is-open">
+                <video src="../app/public/vid.m4v" autoplay class="remote-video"></video>
+                <video src="../app/public/vid.m4v" autoplay class="local-video"></video>
+                <div class="video-btns">
+                  <svg id="mute-audio" class="vid-element" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-10 -10 68 68">
+                    <title>title</title>
+                    <circle cx="24" cy="24" r="34">
+                      <title>Mute audio</title>
+                    </circle>
+                    <path class="off-item on" transform="scale(0.6), translate(17,18)" d="M38 22h-3.4c0 1.49-.31 2.87-.87 4.1l2.46 2.46C37.33 26.61 38 24.38 38 22zm-8.03.33c0-.11.03-.22.03-.33V10c0-3.32-2.69-6-6-6s-6 2.68-6 6v.37l11.97 11.96zM8.55 6L6 8.55l12.02 12.02v1.44c0 3.31 2.67 6 5.98 6 .45 0 .88-.06 1.3-.15l3.32 3.32c-1.43.66-3 1.03-4.62 1.03-5.52 0-10.6-4.2-10.6-10.2H10c0 6.83 5.44 12.47 12 13.44V42h4v-6.56c1.81-.27 3.53-.9 5.08-1.81L39.45 42 42 39.46 8.55 6z" fill="white"></path>
+                    <path class="off" transform="scale(0.6), translate(17,18)" d="M24 28c3.31 0 5.98-2.69 5.98-6L30 10c0-3.32-2.68-6-6-6-3.31 0-6 2.68-6 6v12c0 3.31 2.69 6 6 6zm10.6-6c0 6-5.07 10.2-10.6 10.2-5.52 0-10.6-4.2-10.6-10.2H10c0 6.83 5.44 12.47 12 13.44V42h4v-6.56c6.56-.97 12-6.61 12-13.44h-3.4z" fill="white"></path>
+                  </svg>
+                  <svg id="mute-video" class="vid-element" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-10 -10 68 68">
+                    <circle cx="24" cy="24" r="34">
+                      <title>Mute video</title>
+                    </circle>
+                    <path class="off-item on" transform="scale(0.6), translate(17,16)" d="M40 8H15.64l8 8H28v4.36l1.13 1.13L36 16v12.36l7.97 7.97L44 36V12c0-2.21-1.79-4-4-4zM4.55 2L2 4.55l4.01 4.01C4.81 9.24 4 10.52 4 12v24c0 2.21 1.79 4 4 4h29.45l4 4L44 41.46 4.55 2zM12 16h1.45L28 30.55V32H12V16z" fill="white"></path>
+                    <path class="off" transform="scale(0.6), translate(17,16)" d="M40 8H8c-2.21 0-4 1.79-4 4v24c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zm-4 24l-8-6.4V32H12V16h16v6.4l8-6.4v16z" fill="white"></path>
+                  </svg>
+                  <svg id="fullscreen" class="vid-element" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-10 -10 68 68">
+                    <circle cx="24" cy="24" r="34">
+                      <title>Enter fullscreen</title>
+                    </circle>
+                    <path class="off-item on" transform="scale(0.8), translate(7,6)" d="M10 32h6v6h4V28H10v4zm6-16h-6v4h10V10h-4v6zm12 22h4v-6h6v-4H28v10zm4-22v-6h-4v10h10v-4h-6z" fill="white"></path>
+                    <path class="off" transform="scale(0.8), translate(7,6)" d="M14 28h-4v10h10v-4h-6v-6zm-4-8h4v-6h6v-4H10v10zm24 14h-6v4h10V28h-4v6zm-6-24v4h6v6h4V10H28z" fill="white"></path>
+                  </svg>
+                  <svg id="hangup" class="vid-element" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-10 -10 68 68">
+                    <circle cx="24" cy="24" r="34">
+                      <title>Hangup</title>
+                    </circle>
+                    <path transform="scale(0.7), translate(11,10)" d="M24 18c-3.21 0-6.3.5-9.2 1.44v6.21c0 .79-.46 1.47-1.12 1.8-1.95.98-3.74 2.23-5.33 3.7-.36.35-.85.57-1.4.57-.55 0-1.05-.22-1.41-.59L.59 26.18c-.37-.37-.59-.87-.59-1.42 0-.55.22-1.05.59-1.42C6.68 17.55 14.93 14 24 14s17.32 3.55 23.41 9.34c.37.36.59.87.59 1.42 0 .55-.22 1.05-.59 1.41l-4.95 4.95c-.36.36-.86.59-1.41.59-.54 0-1.04-.22-1.4-.57-1.59-1.47-3.38-2.72-5.33-3.7-.66-.33-1.12-1.01-1.12-1.8v-6.21C30.3 18.5 27.21 18 24 18z" fill="white"></path>
+                  </svg>
+                </div>
+              </div>
+            </dd>
+          </dt>
+          <dt class="accordion__title">Notes
+            <dd class="accordion__content">
+              <ul class="user-cards note-helper">
+                <li class="ui-card note__item">
+                  <p class="note-date">Mon, Dec 29 2014, 6:35 am</p>
+                  <p class="note-body">
+                    Nam quam nunc, blandit vel, luctus pulvinar,
+                    hendrerit id, lorem. Vivamus aliquet elit ac nisl.
+                  </p>
+                </li>
+                <li class="ui-card note__item">
+                  <p class="note-date">Mon, Dec 29 2014, 6:35 am</p>
+                  <p class="note-body">
+                    Nam quam nunc, blandit vel, luctus pulvinar,
+                    hendrerit id, lorem. Vivamus aliquet elit ac nisl.
+                  </p>
+                </li>
+                <li class="ui-card note__item">
+                  <p class="note-date">Mon, Dec 29 2014, 6:35 am</p>
+                  <p class="note-body">
+                    Nam quam nunc, blandit vel, luctus pulvinar,
+                    hendrerit id, lorem. Vivamus aliquet elit ac nisl.
+                  </p>
+                </li>
+                <li class="ui-card note__item">
+                  <p class="note-date">Mon, Dec 29 2014, 6:35 am</p>
+                  <p class="note-body">
+                    Nam quam nunc, blandit vel, luctus pulvinar,
+                    hendrerit id, lorem. Vivamus aliquet elit ac nisl.
+                  </p>
+                </li>
+                <li class="gap"></li>
+                <li class="gap"></li>
+              </ul>
+              <form>
+                <div class="icon">
+                  <input type="text" placeholder="Enter the note details" class="c-input">
+                </div>
+                <div class="submit-wrapper">
+                  <input type="submit" value="Submit" class="c-btn-submit">
+                </div>
+              </form>
+            </dd>
+          </dt>
+          <dt class="accordion__title">Code Highlight
+            <dd class="accordion__content"></dd>
+          </dt>
+        </dl>
+      </section>
+    </main>
+    <div class="chat-block">
+      <div class="chat-wrap">
+        <div class="conf-wrap">
+          <ol class="conversation">
+            <li class="self">
+              <div class="message">
+                <p>Hello, how are you?</p>
+                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+              </div>
+            </li>
+            <li class="other">
+              <div class="chat-avatar-wrapper"><img src="../app/public/images/12.png" class="chat-avatar"></div>
+              <div class="message">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+              </div>
+            </li>
+            <li class="self">
+              <div class="message">
+                <p>It is a long established fact that a reader will be distracted</p>
+                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+              </div>
+            </li>
+            <li class="other">
+              <div class="chat-avatar-wrapper"><img src="../app/public/images/12.png" class="chat-avatar"></div>
+              <div class="message">
+                <p>Contrary to popular belief</p>
+                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" placeholder="Send message" class="chat-input-area__input">
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      document.querySelector( ".acc-photo-link" ).
+          addEventListener( "click", function() {
+            document.querySelector( ".header-nav" ).classList.toggle( "active" );
+          });
+      
+      document.querySelector('#mute-audio').
+        addEventListener('click', function() {
+          this.querySelector('.off-item').classList.toggle('on');
+        });
+      document.querySelector('#mute-video').
+        addEventListener('click', function() {
+          this.querySelector('.off-item').classList.toggle('on');
+        });
+      document.querySelector('#fullscreen').
+        addEventListener('click', function() {
+          this.querySelector('.off-item').classList.toggle('on');
+        });
+        
+      var isFullscreen = false;
+      document.querySelector('#fullscreen').
+        addEventListener('click', function() {
+          var video = document.querySelector('.remote-video');
+          if(!isFullscreen){
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } 
+                else if (video.mozRequestFullScreen) {
+                    container.mozRequestFullScreen(); // Firefox
+                } 
+                else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen(); // Chrome and Safari
+                }
+                isFullscreen=true;
+            }
+            else{
+      
+                if(document.cancelFullScreen) {
+                    document.cancelFullScreen();
+                } 
+                else if(document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } 
+                else if(document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                }
+                isFullscreen=false;
+            }
+        });
+      if($(window).width() > 768){
+      
+        // Hide all but first tab content on larger viewports
+        $('.accordion__content:not(:first)').hide();
+      
+        // Activate first tab
+        $('.accordion__title:first-child').addClass('active');
+      
+        } else {
+          
+        // Hide all content items on narrow viewports
+        $('.accordion__content').hide();
+        };
+      
+        // Wrap a div around content to create a scrolling container which we're going to use on narrow viewports
+        $( ".accordion__content" ).wrapInner( "<div class='overflow-scrolling'></div>" );
+      
+        // The clicking action
+        $('.accordion__title').on('click', function() {
+        $('.accordion__content').hide();
+        $(this).next().show().prev().addClass('active').siblings().removeClass('active');
+        });
+    </script>
+  </body>
+</html>

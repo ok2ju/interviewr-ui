@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    block title
+      title Default title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../app/client/styles/style.css')
+    link(rel='stylesheet', href='../app/client/styles/font-awesome.css')
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+    script(src='https://code.jquery.com/jquery-1.11.3.min.js')
+    script(src='https://code.jquery.com/ui/1.11.4/jquery-ui.min.js')
+    style.
+      .ui-tooltip {
+        font-size: 11px;
+        border: 0;
+        border-radius: 2px;
+        background: #f9fafb;
+      }
+
+      .arrow {
+        width: 70px;
+        height: 16px;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        margin-left: -35px;
+        bottom: -16px;
+      }
+      .arrow.top {
+        top: -16px;
+        bottom: auto;
+      }
+      .arrow.left {
+        left: 20%;
+      }
+      .arrow:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: -20px;
+        width: 25px;
+        height: 25px;
+        box-shadow: 6px 5px 9px -9px black;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .arrow.top:after {
+        bottom: -20px;
+        top: auto;
+      }
+  body.vid-body
+    block content

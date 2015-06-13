@@ -1,0 +1,237 @@
+extends ./components/layout/main-layout.jade
+
+block title
+  title Candidates
+
+block header
+  include ./components/header/header.jade
+
+block content
+  main(role='main').content
+    section.container
+      header.c-content-header
+        h1.c-content-header__name Candidates
+      div.vacancies-container
+        ul.vacancies
+          li.vacancies__item.vacancies-tag Vacancies:
+          li.vacancies__item
+            span.vacancies-label.label-default WEB-Designer
+          li.vacancies__item
+            span.vacancies-label.label-primary Android Engineer
+          li.vacancies__item
+            span.vacancies-label.label-success HR Manager
+          li.vacancies__item
+            span.vacancies-label.label-info iOS Developer
+          li.vacancies__item
+            span.vacancies-label.label-warning Front-End Engineer
+          li.vacancies__item
+            span.vacancies-label.label-danger QA Engineer
+      ul.user-cards
+        li.ui-card
+          div.card-image
+            a(href='#').check-profile-link
+              img(src='images/1.png')
+            div.card-overlay
+              div.btns-wrap
+                a(href='#').card-overlay-link Set Date
+                a(href='#').card-overlay-link More
+          div.card-content
+            h1 Scott Chisholm
+            div.meta
+              span.indicate.label-warning
+              a(href='#').group Front-End
+          div.test-result
+            span.card-footer
+              i.fa.i-card.fa-file-text-o
+              span.test-score 82%
+            span.card-footer
+              i.fa.i-card.fa-clock-o
+              span.test-score 13.06.2015
+        li.ui-card
+          div.card-image
+            a(href='#').check-profile-link
+              img(src='images/12.png')
+            div.card-overlay
+              div.btns-wrap
+                a(href='#').card-overlay-link Set Date
+                a(href='#').card-overlay-link More
+          div.card-content
+            h1 Scott Chisholm
+            div.meta
+              span.indicate.label-info
+              a(href='#').group iOS Developer
+          div.test-result
+            span.card-footer
+              i.fa.i-card.fa-file-text-o
+              span.test-score 82%
+            span.card-footer
+              i.fa.i-card.fa-clock-o
+              span.test-score 13.06.2015
+        li.ui-card
+          div.card-image
+            a(href='#').check-profile-link
+              img(src='images/1.png')
+            div.card-overlay
+              div.btns-wrap
+                a(href='#').card-overlay-link Set Date
+                a(href='#').card-overlay-link More
+          div.card-content
+            h1 Scott Chisholm
+            div.meta
+              span.indicate.label-default
+              a(href='#').group Designer
+          div.test-result
+            span.card-footer
+              i.fa.i-card.fa-file-text-o
+              span.test-score 82%
+            span.card-footer
+              i.fa.i-card.fa-clock-o
+              span.test-score 13.06.2015
+        li.ui-card
+          div.card-image
+            a(href='#').check-profile-link
+              img(src='images/12.png')
+            div.card-overlay
+              div.btns-wrap
+                a(href='#').card-overlay-link Set Date
+                a(href='#').card-overlay-link More
+          div.card-content
+            h1 Scott Chisholm
+            div.meta
+              span.indicate.label-danger
+              a(href='#').group QA Engineer
+          div.test-result
+            span.card-footer
+              i.fa.i-card.fa-file-text-o
+              span.test-score 82%
+            span.card-footer
+              i.fa.i-card.fa-clock-o
+              span.test-score 13.06.2015
+        li.ui-card
+          div.card-image
+            a(href='#').check-profile-link
+              img(src='images/1.png')
+            div.card-overlay
+              div.btns-wrap
+                a(href='#').card-overlay-link Set Date
+                a(href='#').card-overlay-link More
+          div.card-content
+            h1 Scott Chisholm
+            div.meta
+              span.indicate.label-warning
+              a(href='#').group Front-End
+          div.test-result
+            span.card-footer
+              i.fa.i-card.fa-file-text-o
+              span.test-score 82%
+            span.card-footer
+              i.fa.i-card.fa-clock-o
+              span.test-score 13.06.2015
+        li.gap
+        li.gap
+        li.gap
+        li.gap
+  aside.sideblock
+    section.int-section
+      h1.int-section__header INTERVIEWMAN
+      ul.int-section__list
+        li.item.green
+          span Interview with Andres Jasso
+        li.item.orange 
+          span Interview with Ian Ruppert
+        li.item.red 
+          span Interview with Bartosz Borowiec
+        li.item.blue
+          span Interview with Scott Chisholm
+    section.pay-attention
+      h1.pay-attention__header Pay Attention
+      figure.pay-attention__card
+        a(href='#').card-link.p-photo-container
+          img(src='images/1.png').card-link__photo
+        div.card-container
+          h3.card-container__header
+            span
+              a(href='#').card-link Philippe Francois
+          p
+            span.user-skills WEB-Designer, UI/UX Developer
+          p
+            span.user-skills Earlier worked: GitHub, Google
+    footer
+      ul.footer-list
+        li.footer-list__item
+          a(href='#').footer-link PRIVACY
+        li.footer-list__item
+          a(href='#').footer-link ABOUT
+        li.footer-list__item
+          a(href='#').footer-link CONTACT
+        li.footer-list__item
+          small.copyright &#64 2015 Interviewman, Inc.
+  div.modal
+    div.quick-view
+      div.quick-view__photo
+        img(src='images/1.png')
+      div.quick-view__info
+        h2.quick-view__info-name Scott Chisholm
+        p.quick-view__info-about.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia, omnis illo iste ratione. Numquam eveniet quo, ullam
+          itaque expedita impedit. Eveniet, asperiores amet iste repellendus
+          similique reiciendis, maxime laborum praesentium.
+        form.set-date-form.clear-padding
+          div.icon
+            label.c-form-label Interview Date:
+            input(type='date', name='calendar').c-input
+          div.icon
+            label.c-form-label Interview Time:
+            input(type='text', name='time').c-input
+          div.submit-wrapper
+            input(type='submit', value='Set Interview Date').c-btn-submit.clear-float
+            a(href='#').quick-view__info-link Check Full Profile
+      a(href='#').modal-close-btn
+  script(type="text/javascript").
+    document.querySelector( ".aside-toggle-wrapper" )
+      .addEventListener( "click", function() {
+        this.classList.toggle( "active" );
+        document.querySelector( ".sideblock" ).classList.toggle( "active" );
+        document.querySelector( ".content-block" ).classList.toggle( "active" );
+        document.querySelector( ".c-header-wrapper" ).classList.toggle( "active" );
+        document.querySelector( ".user-nav" ).classList.toggle( "active" );
+      });
+
+    document.querySelector( ".acc-photo-link" ).
+      addEventListener( "click", function() {
+        document.querySelector( ".header-nav" ).classList.toggle( "active" );
+        var svgElements = document.getElementsByTagName('svg');
+        var testElements = document.querySelectorAll('.navbar-ico');
+
+        for(var i = 0; i < svgElements.length; i++) {
+          svgElements[i].classList.toggle('hide-svg');
+          testElements[i].classList.toggle('show-text');
+        }
+      });
+
+    document.querySelector('.extra-right').
+      addEventListener('click', function() {
+        document.querySelector('.modal').classList.toggle('is-visible');
+      });
+
+    document.querySelector('.modal-close-btn').
+      addEventListener('click', function() {
+        document.querySelector('.modal').classList.remove('is-visible');
+      });
+  script(type='text/javascript', src='http://code.jquery.com/jquery-1.10.2.js')
+  script(type='text/javascript', src='http://code.jquery.com/ui/1.11.4/jquery-ui.js')
+  script(type='text/javascript').
+    $(function() {
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 100,
+        values: [ 75, 100 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val(ui.values[ 0 ] + "%" + " - " + ui.values[ 1 ] + "%");
+        }
+      });
+      $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + "%" + " - " +
+        $( "#slider-range" ).slider( "values", 1 ) + "%");
+    });

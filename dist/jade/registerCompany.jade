@@ -1,0 +1,63 @@
+extends ./components/layout/main-layout.jade
+
+block title
+  title Company Registration
+
+block header
+  include ./components/header/header.jade
+
+block content
+  main(role='main').content
+    section.container
+      section.row
+        section.r-company
+          h1.r-company__head Company Registration
+          p.r-company__about.
+            Lorem ipsum text about nothing Lorem ipsum text about nothing Lorem ipsum text about nothing
+            Lorem ipsum text about nothing Lorem ipsum text about nothing Lorem ipsum text about nothing
+            Lorem ipsum text about nothing Lorem ipsum text about nothing Lorem ipsum text about nothing
+        form.c-form
+          fieldset.c-form-fieldset
+            legend.form-section-legend Company Info:
+            div.error-msg.is-visible
+              p Please enter a valid email address!
+            div.icon
+              label.c-form-label Abbreviation:
+              input(type='text', name='company-abbr').company-abbr.c-input
+            div.icon
+              label.c-form-label Full name:
+              input(type='text', name='company-name').company-name.c-input
+            div.icon
+              label.c-form-label Founding date:
+              input(type='text', name='founding-date').founding-date.c-input
+            div.icon
+              label.c-form-label Country of origin:
+              p
+                select.cof.c-input
+                  option(value='blr') Belarus
+                  option(value='rus') Russia
+                  option(value='usa') United States
+            div.icon
+              label.c-form-label Email:
+              input(type='text', name='company-email').company-email.c-input
+            div.icon
+              label.c-form-label Description
+              textarea(name='description', required).c-description.c-input
+          fieldset.c-form-fieldset
+            legend.form-section-legend Address Info:
+            div.icon
+              label.c-form-label Address Line 1:
+              input(type='text', name='founding-date').founding-date.c-input
+            div.icon
+              label.c-form-label Address Line 2:
+              input(type='text', name='founding-date').founding-date.c-input
+            div.icon
+              label.c-form-label Home Post Code:
+              input(type='text', name='founding-date').founding-date.c-input
+            div.submit-wrapper
+              input(type='submit', value='Register').c-btn-submit
+  script(type='text/javascript').
+    document.querySelector( ".acc-photo-link" ).
+        addEventListener( "click", function() {
+          document.querySelector( ".header-nav" ).classList.toggle( "active" );
+        });
