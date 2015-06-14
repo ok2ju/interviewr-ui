@@ -11,6 +11,9 @@ block content
     section.container
       header.c-content-header
         h1.c-content-header__name Candidates
+        div.grid-controls
+          i.icon-th-thumb
+          i.icon-th-list
       div.vacancies-container
         ul.vacancies
           li.vacancies__item.vacancies-tag Vacancies:
@@ -198,40 +201,14 @@ block content
         document.querySelector( ".user-nav" ).classList.toggle( "active" );
       });
 
-    document.querySelector( ".acc-photo-link" ).
-      addEventListener( "click", function() {
-        document.querySelector( ".header-nav" ).classList.toggle( "active" );
-        var svgElements = document.getElementsByTagName('svg');
-        var testElements = document.querySelectorAll('.navbar-ico');
-
-        for(var i = 0; i < svgElements.length; i++) {
-          svgElements[i].classList.toggle('hide-svg');
-          testElements[i].classList.toggle('show-text');
-        }
-      });
-
-    document.querySelector('.extra-right').
-      addEventListener('click', function() {
-        document.querySelector('.modal').classList.toggle('is-visible');
-      });
-
     document.querySelector('.modal-close-btn').
       addEventListener('click', function() {
         document.querySelector('.modal').classList.remove('is-visible');
       });
-  script(type='text/javascript', src='http://code.jquery.com/jquery-1.10.2.js')
-  script(type='text/javascript', src='http://code.jquery.com/ui/1.11.4/jquery-ui.js')
-  script(type='text/javascript').
-    $(function() {
-      $( "#slider-range" ).slider({
-        range: true,
-        min: 0,
-        max: 100,
-        values: [ 75, 100 ],
-        slide: function( event, ui ) {
-          $( "#amount" ).val(ui.values[ 0 ] + "%" + " - " + ui.values[ 1 ] + "%");
-        }
-      });
-      $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + "%" + " - " +
-        $( "#slider-range" ).slider( "values", 1 ) + "%");
-    });
+
+    document.querySelector('.icon-down-open-big').
+      addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('.primary-nav-overlay').classList.toggle('active');
+        document.querySelector('.header-nav').classList.toggle('active');
+        });

@@ -44,7 +44,7 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
   top: 18px;
   left: 35px;
 
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 960px) {
     float: none;
   }
 }
@@ -130,7 +130,6 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
   top: 0;
   white-space: nowrap;
   width: 50px;
-  //position: relative;
   position: absolute;
 }
 
@@ -184,16 +183,21 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
 }
 
 .navbar-btns {
-  float: right;
+  float: left;
   height: 60px;
-  margin-right: 45px;
+  margin-right: 15px;
 
-  @media only screen and (max-width: 950px) {
-    float: none;
-    text-align: center;
-    height: inherit;
-    line-height: inherit;
+  @media only screen and (max-width: 960px) {
+    display: none;
+    position: absolute;
+    height: auto;
+    background-color: #fff;
+    top: 44px;
+    right: 0;
+    border: 1px solid #eee;
+    border-radius: 3px;
     margin-right: 0;
+    z-index: 5;
   }
 }
 
@@ -201,15 +205,12 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
   display: inline-block;
   margin-right: 15px;
 
-  @media only screen and (max-width: 950px) {
-    display: block;
+  @media only screen and (max-width: 960px) {
     margin-right: 0;
-    padding: 0.5em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    transition: all .3s ease-in-out;
+    display: block;
 
     &:hover {
-      background-color: rgba(0, 0, 0, .01);
+      background-color: rgba(0, 0, 0, 0.04);
     }
   }
 }
@@ -224,6 +225,15 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
     overflow: hidden;
     color: transparent;
     white-space: nowrap;
+
+    @media only screen and (max-width: 960px) {
+      @include font-size(11px);
+      color: #333;
+      overflow: auto;
+      white-space: normal;
+      display: block;
+      padding: 10px;
+    }
   }
 
   .hide-svg {
@@ -239,10 +249,31 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
 .acc-photo {
   position: absolute;
   right: 15px;
-  top: 12px;
+
+  &:hover > .navbar-btns,
+  &:focus > .navbar-btns,
+  &:active > .navbar-btns {
+    display: block;
+  }
 
   .acc-photo-link {
     display: block;
+    float: left;
+    margin-top: 12px;
+  }
+
+  @media only screen and (max-width: 960px) {
+    top: 0;
+    float: right;
+  }
+}
+
+.icon-down-dir {
+  vertical-align: middle;
+  display: none;
+
+  @media only screen and (max-width: 960px) {
+    display: inline;
   }
 }
 
@@ -250,29 +281,31 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  vertical-align: middle;
 }
 
 .header-nav {
   @include clearfix;
-
-  @media only screen and (max-width: 950px) {
-    background-color: #fff;
-    display: none;
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-top: none;
-  }
+  float: left;
 
   &.active {
     display: block;
   }
-}
 
-.header-nav__list {
-  float: left;
-
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 960px) {
     float: none;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: -100px;
+    right: -100px;
+    background: #EFEDF0;
     text-align: center;
+  }
+
+  @media only screen and (max-width: 768px) {
+    left: 0;
+    right: 0;
   }
 }
 
@@ -280,12 +313,6 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
   display: inline-block;
 
   @media only screen and (max-width: 950px) {
-    display: block;
-    height: inherit;
-    line-height: inherit;
-    padding: 0.5em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    transition: all .3s ease-in-out;
 
     &:hover {
       background-color: rgba(0, 0, 0, .01);
@@ -299,7 +326,53 @@ $header-border-bottom-color: rgba(137,137,137,0.3);
   padding: 23px 12px 22px 12px;
   display: block;
 
+  //test
+  font-weight: 500;
+
   &:hover {
     color: #59728e;
+  }
+
+  @media only screen and (max-width: 960px) {
+    @include font-size(11px);
+    padding: 10px 12px 10px 12px;
+  }
+}
+
+.icon-down-open-big {
+  display: none;
+  cursor: pointer;
+  transition: all .2s linear;
+
+  &.active {
+    transform: rotate(180deg);
+  }
+
+  @media only screen and (max-width: 960px) {
+    display: inline-block;
+  }
+}
+
+.primary-nav-overlay {
+  transition: all .3s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    display: block;
+    opacity: .9;
+    visibility: visible;
+    transition: all .3s ease;
+  }
+
+  @media only screen and (max-width: 960px) {
+    position: fixed;
+    top: 93px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 4;
+    transition: all .3s ease;
   }
 }

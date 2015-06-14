@@ -416,7 +416,7 @@ textarea {
   position: relative;
   top: 18px;
   left: 35px; }
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 960px) {
     .navbar-header {
       float: none; } }
 
@@ -536,29 +536,31 @@ textarea {
   transform: translateY(5px); }
 
 .navbar-btns {
-  float: right;
+  float: left;
   height: 60px;
-  margin-right: 45px; }
-  @media only screen and (max-width: 950px) {
+  margin-right: 15px; }
+  @media only screen and (max-width: 960px) {
     .navbar-btns {
-      float: none;
-      text-align: center;
-      height: inherit;
-      line-height: inherit;
-      margin-right: 0; } }
+      display: none;
+      position: absolute;
+      height: auto;
+      background-color: #fff;
+      top: 44px;
+      right: 0;
+      border: 1px solid #eee;
+      border-radius: 3px;
+      margin-right: 0;
+      z-index: 5; } }
 
 .navbar-btns__item {
   display: inline-block;
   margin-right: 15px; }
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 960px) {
     .navbar-btns__item {
-      display: block;
       margin-right: 0;
-      padding: 0.5em;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out; }
+      display: block; }
       .navbar-btns__item:hover {
-        background-color: rgba(0, 0, 0, 0.01); } }
+        background-color: rgba(0, 0, 0, 0.04); } }
 
 .navbar-ico i:hover {
   color: #59728e; }
@@ -569,6 +571,15 @@ textarea {
   overflow: hidden;
   color: transparent;
   white-space: nowrap; }
+  @media only screen and (max-width: 960px) {
+    .navbar-ico.img-replace {
+      font-size: 11px;
+      font-size: 0.6875rem;
+      color: #333;
+      overflow: auto;
+      white-space: normal;
+      display: block;
+      padding: 10px; } }
 
 .navbar-ico .hide-svg {
   display: none; }
@@ -580,59 +591,108 @@ textarea {
 
 .acc-photo {
   position: absolute;
-  right: 15px;
-  top: 12px; }
-  .acc-photo .acc-photo-link {
+  right: 15px; }
+  .acc-photo:hover > .navbar-btns,
+  .acc-photo:focus > .navbar-btns,
+  .acc-photo:active > .navbar-btns {
     display: block; }
+  .acc-photo .acc-photo-link {
+    display: block;
+    float: left;
+    margin-top: 12px; }
+  @media only screen and (max-width: 960px) {
+    .acc-photo {
+      top: 0;
+      float: right; } }
+
+.icon-down-dir {
+  vertical-align: middle;
+  display: none; }
+  @media only screen and (max-width: 960px) {
+    .icon-down-dir {
+      display: inline; } }
 
 .acc-photo__img {
   width: 32px;
   height: 32px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  vertical-align: middle; }
 
-.header-nav::after {
-  clear: both;
-  content: '';
-  display: table; }
-
-@media only screen and (max-width: 950px) {
-  .header-nav {
-    background-color: #fff;
-    display: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: none; } }
-
-.header-nav.active {
-  display: block; }
-
-.header-nav__list {
+.header-nav {
   float: left; }
-  @media only screen and (max-width: 950px) {
-    .header-nav__list {
+  .header-nav::after {
+    clear: both;
+    content: '';
+    display: table; }
+  .header-nav.active {
+    display: block; }
+  @media only screen and (max-width: 960px) {
+    .header-nav {
       float: none;
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: -100px;
+      right: -100px;
+      background: #EFEDF0;
       text-align: center; } }
+  @media only screen and (max-width: 768px) {
+    .header-nav {
+      left: 0;
+      right: 0; } }
 
 .header-nav__list-item {
   display: inline-block; }
   @media only screen and (max-width: 950px) {
-    .header-nav__list-item {
-      display: block;
-      height: inherit;
-      line-height: inherit;
-      padding: 0.5em;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out; }
-      .header-nav__list-item:hover {
-        background-color: rgba(0, 0, 0, 0.01); } }
+    .header-nav__list-item:hover {
+      background-color: rgba(0, 0, 0, 0.01); } }
 
 .header-nav__link {
   font-size: 13px;
   font-size: 0.8125rem;
   color: rgba(0, 0, 0, 0.87);
   padding: 23px 12px 22px 12px;
-  display: block; }
+  display: block;
+  font-weight: 500; }
   .header-nav__link:hover {
     color: #59728e; }
+  @media only screen and (max-width: 960px) {
+    .header-nav__link {
+      font-size: 11px;
+      font-size: 0.6875rem;
+      padding: 10px 12px 10px 12px; } }
+
+.icon-down-open-big {
+  display: none;
+  cursor: pointer;
+  transition: all 0.2s linear; }
+  .icon-down-open-big.active {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  @media only screen and (max-width: 960px) {
+    .icon-down-open-big {
+      display: inline-block; } }
+
+.primary-nav-overlay {
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden; }
+  .primary-nav-overlay.active {
+    display: block;
+    opacity: .9;
+    visibility: visible;
+    transition: all 0.3s ease; }
+  @media only screen and (max-width: 960px) {
+    .primary-nav-overlay {
+      position: fixed;
+      top: 93px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      z-index: 4;
+      transition: all 0.3s ease; } }
 
 .conf-wrap {
   bottom: 36px;
@@ -981,6 +1041,9 @@ textarea {
   color: rgba(0, 0, 0, 0.87);
   font-size: 14px !important;
   padding: 23px 0; }
+  @media only screen and (max-width: 960px) {
+    .ico-controll {
+      display: none !important; } }
 
 .ico-company-locate {
   margin-right: 3px; }
@@ -1029,6 +1092,12 @@ textarea {
 .tooltip-v:hover:before {
   bottom: -15px;
   left: 0; }
+
+@media only screen and (max-width: 960px) {
+  .tooltip-v:hover:after {
+    content: none; }
+  .tooltip-v:hover:before {
+    content: none; } }
 
 .pull-left {
   float: left; }
@@ -1556,6 +1625,14 @@ main.test-vid {
   top: -2px;
   background-color: #ccc;
   border: 1px solid #9f9f9f; }
+
+.grid-controls {
+  float: right;
+  margin-top: 5px; }
+  .grid-controls i {
+    cursor: pointer; }
+  .grid-controls i:hover {
+    color: #59728e; }
 
 .pull-left {
   float: left; }

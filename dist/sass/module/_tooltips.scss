@@ -43,4 +43,16 @@
       left: 0;
     }
   }
+
+  @media only screen and (max-width: 960px) {
+    &:hover {
+      &:after {
+        content: none;
+      }
+
+      &:before {
+        content: none;
+      }
+    }
+  }
 }
