@@ -33,30 +33,15 @@ $header-font-color: #fff;
   padding-top: 90px;
   position: relative;
   transition: all .3s ease-in-out;
+  left: 0;
 
   &.active {
     left: 280px;
+    overflow: hidden;
   }
 }
 
 .p-col {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.content-block {
-  //left: percentage(350px / 1280px);
-  left: 0;
-  position: relative;
-  //top: 66px;
-  //width: percentage(930px / 1280px);
-  transition: all .3s ease-in-out;
-  //width: 100%;
-
-  //test
-  top: 50px;
-
-  &.active {
-    left: 280px;
-  }
 }

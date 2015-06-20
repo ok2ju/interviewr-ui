@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Candidates</title>
+    <title>IV Candidates</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
@@ -35,7 +35,7 @@
       <section class="container">
         <header class="c-content-header">
           <h1 class="c-content-header__name">Candidates</h1>
-          <div class="grid-controls"><i class="icon-th-thumb"></i><i class="icon-th-list"></i></div>
+          <div class="grid-controls"><i class="icon-th-list"></i><i class="icon-th-thumb"></i></div>
         </header>
         <div class="vacancies-container">
           <ul class="vacancies">
@@ -145,54 +145,6 @@
         </ul>
       </footer>
     </aside>
-    <div class="modal">
-      <div class="quick-view">
-        <div class="quick-view__photo"><img src="images/1.png"></div>
-        <div class="quick-view__info">
-          <h2 class="quick-view__info-name">Scott Chisholm</h2>
-          <p class="quick-view__info-about">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Officia, omnis illo iste ratione. Numquam eveniet quo, ullam
-            itaque expedita impedit. Eveniet, asperiores amet iste repellendus
-            similique reiciendis, maxime laborum praesentium.
-          </p>
-          <form class="set-date-form clear-padding">
-            <div class="icon">
-              <label class="c-form-label">Interview Date:</label>
-              <input type="date" name="calendar" class="c-input">
-            </div>
-            <div class="icon">
-              <label class="c-form-label">Interview Time:</label>
-              <input type="text" name="time" class="c-input">
-            </div>
-            <div class="submit-wrapper">
-              <input type="submit" value="Set Interview Date" class="c-btn-submit clear-float"><a href="#" class="quick-view__info-link">Check Full Profile</a>
-            </div>
-          </form>
-        </div><a href="#" class="modal-close-btn"></a>
-      </div>
-    </div>
-    <script type="text/javascript">
-      document.querySelector( ".aside-toggle-wrapper" )
-        .addEventListener( "click", function() {
-          this.classList.toggle( "active" );
-          document.querySelector( ".sideblock" ).classList.toggle( "active" );
-          document.querySelector( ".content-block" ).classList.toggle( "active" );
-          document.querySelector( ".c-header-wrapper" ).classList.toggle( "active" );
-          document.querySelector( ".user-nav" ).classList.toggle( "active" );
-        });
-      
-      document.querySelector('.modal-close-btn').
-        addEventListener('click', function() {
-          document.querySelector('.modal').classList.remove('is-visible');
-        });
-      
-      document.querySelector('.icon-down-open-big').
-        addEventListener('click', function() {
-          this.classList.toggle('active');
-          document.querySelector('.primary-nav-overlay').classList.toggle('active');
-          document.querySelector('.header-nav').classList.toggle('active');
-          });
-    </script>
+    <script type="text/javascript" src="javascripts/ui-scripts.js"></script>
   </body>
 </html>

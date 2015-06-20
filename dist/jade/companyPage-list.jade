@@ -1,0 +1,76 @@
+extends ./components/layout/main-layout.jade
+
+block title
+  title IV Candidates
+
+block header
+  include ./components/header/header.jade
+
+block content
+  main(role='main').content
+    section.container
+      ul.user-cards-list
+        li.user-card-item
+          div.u-main-info
+            a(href="#").u-main-info-link
+              img(src="images/1.png", alt="candidate").user-card-item__photo
+              h1.user-card-item__name Scott Chisholm
+            div.u-main-info-pos
+              span.card-list-indicate.label-info
+              a(href='#').card-list-group iOS Developer
+          div.u-second-info
+            span.card-list__ico-wrapper
+              span.progress-bg
+                span(style="width: 82%;").progress-fg
+              span.card-list__test-score 82%
+            span.card-list__ico-wrapper
+              i.fa.i-card.fa-clock-o
+              span.card-list__test-score 13.06.2015
+        li.user-card-item
+          div.u-main-info
+            a(href="#").u-main-info-link
+              img(src="images/12.png", alt="candidate").user-card-item__photo
+              h1.user-card-item__name Adam Addisson
+            div.u-main-info-pos
+              span.card-list-indicate.label-warning
+              a(href='#').card-list-group Front-End
+          div.u-second-info
+            span.card-list__ico-wrapper
+              span.progress-bg
+                span(style="width: 68%;").progress-fg
+              span.card-list__test-score 62%
+            span.card-list__ico-wrapper
+              i.fa.i-card.fa-clock-o
+              span.card-list__test-score empty
+        li.user-card-item
+          div.u-main-info
+            a(href="#").u-main-info-link
+              img(src="images/1.png", alt="candidate").user-card-item__photo
+              h1.user-card-item__name Andy Abbey
+            div.u-main-info-pos
+              span.card-list-indicate.label-info
+              a(href='#').card-list-group iOS Developer
+          div.u-second-info
+            span.card-list__ico-wrapper
+              span.progress-bg
+                span(style="width: 88%;").progress-fg
+              span.card-list__test-score 82%
+            span.card-list__ico-wrapper
+              i.fa.i-card.fa-clock-o
+              span.card-list__test-score 13.06.2015
+        li.user-card-item
+          div.u-main-info
+            a(href="#").u-main-info-link
+              img(src="images/1.png", alt="candidate").user-card-item__photo
+              h1.user-card-item__name Clement Cross
+            div.u-main-info-pos
+              span.card-list-indicate.label-info
+              a(href='#').card-list-group iOS Developer
+          div.u-second-info
+            span.card-list__ico-wrapper
+              span.progress-bg
+                span(style="width: 88%;").progress-fg
+              span.card-list__test-score 8%
+            span.card-list__ico-wrapper
+              i.fa.i-card.fa-clock-o
+              span.card-list__test-score 13.06.2015
